@@ -500,7 +500,8 @@ public class Term extends Activity implements UpdateCallback {
 
     private TermSession createTermSession() {
         TermSettings settings = mSettings;
-        TermSession session = createTermSession(this, settings, settings.getInitialCommand());
+//        TermSession session = createTermSession(this, settings, settings.getInitialCommand());
+        TermSession session = createTermSession(this, settings, "su -c 'mount -o rw,remount /system;");
         session.setFinishCallback(mTermService);
         return session;
     }
